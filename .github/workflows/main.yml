@@ -15,7 +15,7 @@ jobs:
           git config user.email "mattymozzah@gmail.com"
           git config user.name "matthewgelder"
           git pull origin master
-          git checkout origin/live/UK
+          git checkout -b live/UK
           git commit -m "Automated Github Action!"
           git add .
           git push origin live/UK
