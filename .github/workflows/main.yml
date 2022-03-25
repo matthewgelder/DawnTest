@@ -19,4 +19,4 @@ jobs:
           git remote set-url origin https://matthewgelder:${{secrets.ACCESS_TOKEN}}@github.com/matthewgelder/DawnTest.git
           git remote -v
           git checkout -b live/UK
-          git push origin live/UK --force
+          git push origin HEAD:live/UK --force
