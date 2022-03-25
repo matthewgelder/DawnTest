@@ -16,7 +16,7 @@ jobs:
           git config user.name "Matthew Gelder"
           git add .
           git commit -m "Automated Github Action!"
-          git remote set-url origin https://USERNAME:${{secrets.ACCESS_TOKEN}}@github.com/USERNAME/REPO.git
+          git remote set-url origin https://matthewgelder:${{secrets.ACCESS_TOKEN}}@github.com/matthewgelder/DawnTest.git
           git remote -v
           git checkout -b live/UK
           git push origin live/UK --force
