@@ -13,8 +13,7 @@ jobs:
       - name: Pushes to all sites
         run: |
           git config user.email "mattymozzah@gmail.com"
-          git config user.name "Matthew Gelder"
-          git pull origin master
+          git config user.name "matthewgelder"
           git add .
           git commit -m "Automated Github Action!"
           git remote set-url origin https://matthewgelder:${{secrets.ACCESS_TOKEN}}@github.com/matthewgelder/DawnTest.git
