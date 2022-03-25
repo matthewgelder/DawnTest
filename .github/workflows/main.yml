@@ -18,4 +18,10 @@ jobs:
           git pull
           git checkout -b live/UK
           git merge master
-          git push -f --set-upstream origin live/UK live/US live/IE
+          git push -f --set-upstream origin live/UK
+          git checkout -b live/US
+          git merge master
+          git push -f --set-upstream origin live/US
+          git checkout -b live/IE
+          git merge master
+          git push -f --set-upstream origin live/IE
