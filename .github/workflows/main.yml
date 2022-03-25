@@ -18,4 +18,4 @@ jobs:
           git pull
           git checkout -b live/UK
           git merge master
-          git push
+          git push --set-upstream origin live/UK
