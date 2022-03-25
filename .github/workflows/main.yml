@@ -9,12 +9,11 @@ jobs:
     # needs: nothing
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Pushes to all sites
         run: |
           git config user.email "mattymozzah@gmail.com"
           git config user.name "matthewgelder"
-          git remote set-url origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/matthewgelder/DawnTest.git
           git pull origin master
           git checkout live/UK
           git commit -m "Automated Github Action!"
