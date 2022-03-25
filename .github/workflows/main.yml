@@ -14,7 +14,7 @@ jobs:
         run: |
           git config user.email "mattymozzah@gmail.com"
           git config user.name "matthewgelder"
-          git remote set-url origin https://matthewgelder:${{secrets.ACCESS_TOKEN}}@github.com/matthewgelder/DawnTest.git
+          git remote set-url origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/matthewgelder/DawnTest.git
           git pull origin master
           git checkout live/UK
           git commit -m "Automated Github Action!"
