@@ -5,7 +5,8 @@ on:
     branches:
       - master
     paths-ignore:
-      - 'templates/**'      
+      - 'templates/**'
+      - 'config/**'
 jobs:
   build:
     # needs: nothing
@@ -14,8 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Pushes to all sites
         run: |
-          git config user.email "mattymozzah@gmail.com"
-          git config user.name "matthewgelder"
           git checkout master
           git pull
           git checkout -b live/UK
