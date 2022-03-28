@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'templates/**'      
 jobs:
   build:
     # needs: nothing
