@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Pushes to all sites
         run: |
-          git checkout master
+          git checkout staging
           git pull
           git checkout -b live/UK
           git push -f --set-upstream origin live/UK
