@@ -3,10 +3,7 @@ name: Pushing to all live branches
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-    - master      
+      - master 
     paths-ignore:
       - 'templates/**'
       - 'config/**'
