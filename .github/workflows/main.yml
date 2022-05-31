@@ -3,15 +3,10 @@ name: Pushing to all live branches
 on:
   push:
     branches:
-      - staging
+      - master
     paths-ignore:
       - 'templates/**'
       - 'config/**'
-      
-  pull_request:
-    branches:
-      - 'master'
-    
 jobs:
   build:
     # needs: nothing
@@ -23,8 +18,11 @@ jobs:
           git checkout master
           git pull
           git checkout -b live/UK
+          git merge master
           git push -f --set-upstream origin live/UK
           git checkout -b live/US
+          git merge master
           git push -f --set-upstream origin live/US
           git checkout -b live/IE
+          git merge master
           git push -f --set-upstream origin live/IE
